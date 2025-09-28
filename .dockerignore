@@ -1,6 +1,20 @@
-# Ignorar todo por defecto
-*
+# Ignorar archivos de Python y entornos locales
+*.py
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+venv/
 
-# Excepto lo que sí quiero que Docker use
-!dockerfile
+# Ignorar git
+.git
+.gitignore
+
+# Ignorar archivos innecesarios
+README.md
+requirements.txt
+
+# Mantener Dockerfile y flujo JSON
+!Dockerfile
 !prueba_PayJoy.json
