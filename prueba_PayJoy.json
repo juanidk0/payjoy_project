@@ -1,0 +1,1074 @@
+{
+  "name": "prueba PayJoy",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1V2gMFrDUd-IMClhiGsDJ4o_TpkxbBZVhS56MwaDfKIA",
+          "mode": "list",
+          "cachedResultName": "Pay Joy Tienda 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1V2gMFrDUd-IMClhiGsDJ4o_TpkxbBZVhS56MwaDfKIA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1V2gMFrDUd-IMClhiGsDJ4o_TpkxbBZVhS56MwaDfKIA/edit#gid=0"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        -128
+      ],
+      "id": "1fd4cead-faf7-452c-97a5-780a46f98545",
+      "name": "Tienda 1 Trigger",
+      "executeOnce": false,
+      "alwaysOutputData": false,
+      "retryOnFail": false,
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "1tgRStaHrVBVtgiN",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw",
+          "mode": "list",
+          "cachedResultName": "Consolidado",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "submission_id": "={{ $json.submission_id }}",
+            "respondent_id": "={{ $json.respondent_id }}",
+            "submitted_at": "={{ $json.submitted_at }}",
+            "tienda": "={{ $json.tienda }}",
+            "experiencia": "={{ $json.experiencia }}",
+            "comentario": "={{ $json.comentario }}",
+            "sugerencias": "={{ $json.sugerencias }}",
+            "contacto": "={{ $json.contacto }}",
+            "comentario_completo": "={{ $json.comentario_completo }}",
+            "motivo_principal": "={{ $json.motivo_principal }}",
+            "numero_telefono": "={{ $json.numero_telefono }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "submission_id",
+              "displayName": "submission_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "respondent_id",
+              "displayName": "respondent_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "submitted_at",
+              "displayName": "submitted_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tienda",
+              "displayName": "tienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "experiencia",
+              "displayName": "experiencia",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "comentario",
+              "displayName": "comentario",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "sugerencias",
+              "displayName": "sugerencias",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "contacto",
+              "displayName": "contacto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "comentario_completo",
+              "displayName": "comentario_completo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "motivo_principal",
+              "displayName": "motivo_principal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "numero_telefono",
+              "displayName": "numero_telefono",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        448,
+        0
+      ],
+      "id": "512b650f-a536-4d4a-84c7-bce02c075aae",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "hoDhdjb0i1iVBrKf",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw",
+          "mode": "list",
+          "cachedResultName": "Consolidado",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 575866540,
+          "mode": "list",
+          "cachedResultName": "Dataset",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit#gid=575866540"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "sentimiento": "={{ $json.message.content.sentimiento }}",
+            "tienda": "={{ $json.message.content.tienda }}",
+            "comentario_original": "={{ $json.message.content.comentario_original }}",
+            "experiencia": "={{ $json.message.content.experiencia }}",
+            "menciona_staff": "={{ $json.message.content.menciona_staff }}",
+            "sugerencias": "={{ $json.message.content.sugerencias }}",
+            "contacto": "={{ $json.message.content.contacto }}",
+            "fecha": "={{ $json.message.content.fecha }}",
+            "categoria principal": "={{ $json.message.content.categoria_1 }}",
+            "categoria 2": "={{ $json.message.content.categoria_2 }}",
+            "categoria 3": "={{ $json.message.content.categoria_3 }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "tienda",
+              "displayName": "tienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "comentario_original",
+              "displayName": "comentario_original",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "experiencia",
+              "displayName": "experiencia",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "sentimiento",
+              "displayName": "sentimiento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "categoria principal",
+              "displayName": "categoria principal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "categoria 2",
+              "displayName": "categoria 2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "categoria 3",
+              "displayName": "categoria 3",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "menciona_staff",
+              "displayName": "menciona_staff",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "sugerencias",
+              "displayName": "sugerencias",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "contacto",
+              "displayName": "contacto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        768,
+        16
+      ],
+      "id": "87cf0477-b7ce-443d-9bf4-de2fac69cdc2",
+      "name": "Append row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "hoDhdjb0i1iVBrKf",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8e767904-818f-421c-bdf7-7b19adecdd2f",
+              "leftValue": "={{ $json.experiencia }}",
+              "rightValue": 4,
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        976,
+        16
+      ],
+      "id": "435dd0cf-7fd4-445e-9872-5e541f4d09c2",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "daysInterval": 7,
+              "triggerAtHour": 6
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -32,
+        432
+      ],
+      "id": "6c168733-b086-4acd-8d8f-a2aedb6a16d0",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import datetime\nimport pytz\n\n# Zona horaria de Colombia\ncolombia_tz = pytz.timezone(\"America/Bogota\")\n\n# Fecha actual en Colombia y hace 7 días\nhoy = datetime.datetime.now(colombia_tz)\nhace_7_dias = hoy - datetime.timedelta(days=7)\n\nfecha_inicio = hace_7_dias.isoformat()\nfecha_fin = hoy.isoformat()\n\n# Array para guardar solo los reviews de la última semana\nreviews_semana = []\n\nfor item in items:\n    data = item.get(\"json\", {})\n    fecha_str = data.get(\"fecha\")\n    if not fecha_str:\n        continue\n    try:\n        # Convertir string \"YYYY-MM-DD H:M:S\" a datetime\n        fecha_dt = datetime.datetime.strptime(fecha_str, \"%Y-%m-%d %H:%M:%S\")\n        # Asignar zona horaria de Colombia\n        fecha_dt = colombia_tz.localize(fecha_dt)\n        # Filtrar solo filas de la última semana\n        if fecha_dt >= hace_7_dias:\n            reviews_semana.append(data)\n    except Exception:\n        continue\n\n# **Salida consolidada en un solo item**\noutput = [{\n    \"json\": {\n        \"fecha_inicio\": fecha_inicio,\n        \"fecha_fin\": fecha_fin,\n        \"reviews\": reviews_semana  # <-- todos los reviews en un array\n    }\n}]\n\nreturn output\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        384,
+        432
+      ],
+      "id": "553be225-07b6-4f6c-8982-532b70b5ce2f",
+      "name": "Obtener raw data resumen semanal"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5-nano-2025-08-07",
+          "mode": "list",
+          "cachedResultName": "GPT-5-NANO-2025-08-07"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Eres un analizador de reviews en español especializado en generar JSON listo para Google Sheets.\n\nReglas:\n\n1. Recibirás un JSON con cada review que contiene campos como:\n\n   * tienda\n   * comentario_completo\n   * experiencia\n   * sugerencias\n   * contacto\n   * submitted_at\n\n2. Debes generar un nuevo JSON para cada review con estas propiedades:\n\n   * tienda → igual que \"tienda\" en la review\n   * comentario_original → igual que \"comentario_completo\" en la review, limpio de emojis y tildes\n   * experiencia → igual que \"experiencia\" en la review\n   * sentimiento → Positivo / Neutral / Negativo según el contenido del comentario\n   * categoria_1 → categoría principal más relevante, obligatoriamente elegida de esta lista:\n\n     1. Atención al cliente / Trato al personal\n     2. Tiempo de espera / Filas\n     3. Disponibilidad de productos / Stock\n     4. Precios / Promociones\n     5. Calidad del producto\n     6. Proceso de pago / Financiamiento\n     7. Ambiente / Limpieza / Orden de la tienda\n     8. Soporte / Resolución de problemas\n     9. Sugerencias de mejoras generales\n     10. Spam\n   * categoria_2 → segunda categoría más relevante, solo si es estrictamente necesario; puede estar vacía\n   * categoria_3 → tercera categoría más relevante, solo si es estrictamente necesario; puede estar vacía\n   * menciona_staff → true si el comentario menciona al personal, false si no\n   * sugerencias → igual que \"sugerencias\" en la review, limpio de emojis y tildes\n   * contacto → igual que \"contacto\" en la review\n   * fecha → igual que \"submitted_at\" en la review\n\n3. Solo puedes usar las categorías de la lista. Nunca inventes categorías fuera de la lista.\n   Si el comentario no contiene suficiente información, deja categoria_2 y categoria_3 vacías o repite categoria_1 solo si es estrictamente necesario.\n\n4. El JSON de salida debe contener todos los valores y no puede tener texto adicional fuera del JSON.\n\n5. Nunca inventes valores. Solo analiza el comentario para determinar:\n\n   * sentimiento\n   * la categoría principal obligatoria\n   * categoria_2 y categoria_3 solo si agregan información relevante\n   * si menciona al staff\n\n6. Asegúrate de limpiar todo texto de emojis, tildes o caracteres especiales que puedan causar errores en Google Sheets.\n",
+              "role": "system"
+            },
+            {
+              "content": "={{ JSON.stringify($json) }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        416,
+        192
+      ],
+      "id": "6ead1bdd-daae-46da-bb31-dd9f2b8a10fd",
+      "name": "Creador de dataset",
+      "credentials": {
+        "openAiApi": {
+          "id": "fmtZDElYjmZwCwWa",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import unicodedata\nimport re\n\n# 'items' viene de n8n automáticamente\n# Cada item es un diccionario con clave 'json' que contiene tu fila de Google Sheets\noutput = []\n\ndef clean_text(text):\n    if text is None:\n        return \"\"\n    text = str(text)\n    # Quitar emojis\n    text = re.sub(r'[\\U00010000-\\U0010ffff]', '', text)\n    # Quitar tildes\n    text = ''.join(c for c in unicodedata.normalize('NFD', text)\n                   if unicodedata.category(c) != 'Mn')\n    return text.strip()\n\nfor item in items:\n    data = item['json']\n    \n    comentario = data.get(\"Breve experiencia del usuario\") or data.get(\"Untitled short answer field\", \"\")\n    sugerencias = data.get(\"Sugerencias\") or data.get(\"Si tienes alguna sugerencia, Cuéntanos! la revisaremos 🛠️ (Opcional)\", \"\")\n    numero_telefono = data.get(\"Numero de telefono\") or data.get(\"Untitled number field\", \"\")\n\n    cleaned = {\n        \"submission_id\": clean_text(data.get(\"Submission ID\")),\n        \"respondent_id\": clean_text(data.get(\"Respondent ID\")),\n        \"submitted_at\": data.get(\"Submitted at\", \"\"),  # no limpiar fecha\n        \"tienda\": data.get(\"Tienda #\", \"\"),\n        \"experiencia\": data.get(\"¿Como fue tu experiencia hoy?\", \"\"),\n        \"comentario\": clean_text(comentario),\n        \"sugerencias\": clean_text(sugerencias),\n        \"contacto\": clean_text(data.get(\"Dejanos tu número y correo para ponernos en contacto🧐.\", \"\")),\n        \"numero_telefono\": re.sub(r'\\D', '', str(numero_telefono)) if numero_telefono else \"\",\n        \"comentario_completo\": clean_text(comentario + \" \" + sugerencias),\n        \"motivo_principal\": (\n            \"Comprar un celular\" if data.get(\"¿A que viniste hoy? (Comprar un celular)\") else\n            \"Realizar un pago\" if data.get(\"¿A que viniste hoy? (Realizar un pago)\") else\n            \"Resolver dudas/soporte\" if data.get(\"¿A que viniste hoy? (Resolver dudas/soporte)\") else\n            \"Otro\" if data.get(\"¿A que viniste hoy? (Otro)\") else \"\"\n        )\n    }\n    \n    output.append({\"json\": cleaned})\n\n# Retornar la lista de items que n8n espera\nreturn output\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        16
+      ],
+      "id": "4081a949-5fbd-4a6f-979c-d29b501383eb",
+      "name": "Procesar y estandarizar las rows"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5-nano-2025-08-07",
+          "mode": "list",
+          "cachedResultName": "GPT-5-NANO-2025-08-07"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Eres un asistente experto en análisis de reviews de clientes en español.\nRecibirás un array JSON con todos los reviews de la semana, con esta estructura:\n\n[\n{\n\"fecha_inicio\": \"...\",\n\"fecha_fin\": \"...\",\n\"review\": {\n\"row_number\": 2,\n\"tienda\": 1,\n\"comentario_original\": \"...\",\n\"experiencia\": 1,\n\"sentimiento\": \"Negativo\",\n\"categoria\": \"...\",\n\"menciona_staff\": \"Sí\",\n\"sugerencias\": \"...\",\n\"contacto\": \"...\",\n\"fecha\": \"...\",\n\"fecha value\": 45927\n}\n},\n...\n]\n\nTu tarea es generar **un único correo ejecutivo semanal**, sin duplicados ni versiones alternativas, que sintetice toda la información de los reviews.\nRequisitos:\n\n1. El correo debe incluir métricas resumidas para todas las tiendas combinadas **y un conteo de reviews por cada tienda**.\n2. Debe contener:\n\n   * Total de reviews de la semana.\n   * Promedio de experiencia (1-5).\n   * Distribución de sentimientos (Positivo, Neutral, Negativo).\n   * Principales categorías mencionadas por los clientes.\n   * Número de reviews que mencionan al staff.\n   * Conteo de reviews por tienda.\n   * Insights clave y patrones observados en los comentarios.\n   * Recomendaciones accionables para mejorar la experiencia del cliente.\n3. Genera un **subject corto y llamativo** (8-10 palabras) que resuma la semana.\n4. Devuelve únicamente un **JSON** con estas dos variables:\n\n   * `subject`: el asunto del correo.\n   * `correo`: el contenido del correo en **HTML profesional y limpio**, con secciones o tablas para mostrar métricas, conteo por tienda, insights y recomendaciones.\n5. El correo debe ser visualmente agradable y fácil de leer, pero simple (puedes usar tablas, títulos y secciones).\n6. **No generes múltiples correos ni alternativas**, solo un único objeto JSON.\n7. No agregues texto fuera del JSON ni explicaciones adicionales.\n8. No inventes valores; solo utiliza la información que está en los reviews recibidos.\n",
+              "role": "system"
+            },
+            {
+              "content": "={{ JSON.stringify($json) }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        560,
+        432
+      ],
+      "id": "b887865c-d14e-4d4e-a45b-75fbda497160",
+      "name": "Crear resumen semanal",
+      "credentials": {
+        "openAiApi": {
+          "id": "fmtZDElYjmZwCwWa",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw",
+          "mode": "list",
+          "cachedResultName": "Consolidado",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 575866540,
+          "mode": "list",
+          "cachedResultName": "Dataset",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit#gid=575866540"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        176,
+        432
+      ],
+      "id": "da932caa-0a02-4bf1-b31d-88ddebae2252",
+      "name": "Obtener los datos resumen semanal",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "hoDhdjb0i1iVBrKf",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1aZl2DYu4CXXVMed02PhvxF3zsqvjBw-WOVRXJkhWCao",
+          "mode": "list",
+          "cachedResultName": "Pay Joy Tienda 2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aZl2DYu4CXXVMed02PhvxF3zsqvjBw-WOVRXJkhWCao/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aZl2DYu4CXXVMed02PhvxF3zsqvjBw-WOVRXJkhWCao/edit#gid=0"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        32
+      ],
+      "id": "7ead0654-3503-4c5d-9d8c-109a2e3ccaff",
+      "name": "Tienda 2 Trigger",
+      "executeOnce": false,
+      "alwaysOutputData": false,
+      "retryOnFail": false,
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "1tgRStaHrVBVtgiN",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1oMS9SNHYEXrWMpQyuOA3mpp4R5Eeo_lvyo-A4rwKe9c",
+          "mode": "list",
+          "cachedResultName": "Pay Joy Tienda 3",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oMS9SNHYEXrWMpQyuOA3mpp4R5Eeo_lvyo-A4rwKe9c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oMS9SNHYEXrWMpQyuOA3mpp4R5Eeo_lvyo-A4rwKe9c/edit#gid=0"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        208
+      ],
+      "id": "c01f336f-e9b5-43f1-a34a-86ca61e747e5",
+      "name": "Tienda 3 Trigger",
+      "executeOnce": false,
+      "alwaysOutputData": false,
+      "retryOnFail": false,
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "1tgRStaHrVBVtgiN",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fromEmail": "juanpython2@gmail.com",
+        "toEmail": "juanpython2@gmail.com",
+        "subject": "={{ $json.message.content.subject }}",
+        "html": "={{ $json.message.content.correo }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        864,
+        432
+      ],
+      "id": "0d4b4991-88a7-4e6a-94a9-8c23f981e9de",
+      "name": "weekly report",
+      "webhookId": "2e63945b-f067-44ef-816d-2ce33a0f7cbe",
+      "credentials": {
+        "smtp": {
+          "id": "Ph1DCEbpcJ5adEtN",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fromEmail": "juanpython2@gmail.com",
+        "toEmail": "juanpython2@gmail.com",
+        "subject": "=[ALERTA] Review negativa - Tienda {{ $('Creador de dataset').item.json.message.content.tienda }}",
+        "html": "=<!DOCTYPE html>\n<html>\n  <body style=\"font-family: Arial, sans-serif; color: #333;\">\n    <h2 style=\"color: #d9534f;\">🚨 Nueva review negativa - Tienda {{ $json.tienda }}</h2>\n    <table style=\"width: 100%; border-collapse: collapse;\">\n      <tr>\n        <td style=\"padding: 8px; width: 150px; font-weight: bold; background-color: #f2f2f2;\">Comentario:</td>\n        <td style=\"padding: 8px;\">{{ $('Creador de dataset').item.json.message.content.comentario_original }}</td>\n      </tr>\n      <tr>\n        <td style=\"padding: 8px; font-weight: bold; background-color: #f2f2f2;\">Sugerencias:</td>\n        <td style=\"padding: 8px;\">{{ $('Creador de dataset').item.json.message.content.sugerencias }}</td>\n      </tr>\n      <tr>\n        <td style=\"padding: 8px; font-weight: bold; background-color: #f2f2f2;\">Experiencia:</td>\n        <td style=\"padding: 8px;\">⭐ {{ $('Creador de dataset').item.json.message.content.experiencia }} / 5</td>\n      </tr>\n      <tr>\n        <td style=\"padding: 8px; font-weight: bold; background-color: #f2f2f2;\">Fecha:</td>\n        <td style=\"padding: 8px;\">{{ $('Creador de dataset').item.json.message.content.fecha }}</td>\n      </tr>\n    </table>\n    <p style=\"margin-top: 20px;\">Por favor, dar seguimiento a esta review a la brevedad.</p>\n  </body>\n</html>\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1232,
+        0
+      ],
+      "id": "f53f0787-a738-4516-9d02-5094ea8a11da",
+      "name": "Bad reviews report",
+      "webhookId": "2e63945b-f067-44ef-816d-2ce33a0f7cbe",
+      "credentials": {
+        "smtp": {
+          "id": "Ph1DCEbpcJ5adEtN",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "reviews",
+          "mode": "list",
+          "cachedResultName": "reviews"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "resuelto": false,
+            "experiencia": "={{ $json.message.content.experiencia }}",
+            "tienda": "={{ $json.message.content.tienda }}",
+            "comentario_original": "={{ $json.message.content.comentario_original }}",
+            "sentimiento": "={{ $json.message.content.sentimiento }}",
+            "categoria_principal": "={{ $json.message.content.categoria_1 }}",
+            "categoria_2": "={{ $json.message.content.categoria_2 }}",
+            "categoria_3": "={{ $json.message.content.categoria_3 }}",
+            "sugerencias": "={{ $json.message.content.sugerencias }}",
+            "contacto": "={{ $json.message.content.contacto }}",
+            "fecha": "={{ $json.message.content.fecha }}",
+            "menciona_staff": "={{ $json.message.content.menciona_staff }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "tienda",
+              "displayName": "tienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "comentario_original",
+              "displayName": "comentario_original",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "experiencia",
+              "displayName": "experiencia",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sentimiento",
+              "displayName": "sentimiento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "categoria_principal",
+              "displayName": "categoria_principal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "categoria_2",
+              "displayName": "categoria_2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "categoria_3",
+              "displayName": "categoria_3",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "menciona_staff",
+              "displayName": "menciona_staff",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "boolean",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sugerencias",
+              "displayName": "sugerencias",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "contacto",
+              "displayName": "contacto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "resuelto",
+              "displayName": "resuelto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "boolean",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        752,
+        208
+      ],
+      "id": "ffe0cd0b-7f7f-4e3b-af76-aa347e92563e",
+      "name": "Insert rows in a table",
+      "credentials": {
+        "postgres": {
+          "id": "vht6SzceZPifcmU6",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DROP TABLE IF EXISTS reviews;\n\nCREATE TABLE reviews (\n    id SERIAL PRIMARY KEY,\n    tienda INT,\n    comentario_original TEXT,\n    experiencia INT,\n    sentimiento TEXT,\n    categoria_principal TEXT,\n    categoria_2 TEXT,\n    categoria_3 TEXT,\n    menciona_staff BOOLEAN,\n    sugerencias TEXT,\n    contacto TEXT,\n    fecha TIMESTAMP,\n    resuelto BOOLEAN\n);\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1296,
+        480
+      ],
+      "id": "6b0a2309-7785-4a53-b58e-595833ce730b",
+      "name": "Execute a SQL query1",
+      "credentials": {
+        "postgres": {
+          "id": "vht6SzceZPifcmU6",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM reviews;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1488,
+        480
+      ],
+      "id": "e20b56ca-f2d0-415e-b50d-18fd570c1407",
+      "name": "Execute a SQL query2",
+      "credentials": {
+        "postgres": {
+          "id": "vht6SzceZPifcmU6",
+          "name": "Postgres account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Tienda 1 Trigger": {
+      "main": [
+        [
+          {
+            "node": "Procesar y estandarizar las rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        []
+      ]
+    },
+    "Append row in sheet1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Bad reviews report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Obtener los datos resumen semanal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obtener raw data resumen semanal": {
+      "main": [
+        [
+          {
+            "node": "Crear resumen semanal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Creador de dataset": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Insert rows in a table",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Procesar y estandarizar las rows": {
+      "main": [
+        [
+          {
+            "node": "Creador de dataset",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obtener los datos resumen semanal": {
+      "main": [
+        [
+          {
+            "node": "Obtener raw data resumen semanal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tienda 2 Trigger": {
+      "main": [
+        [
+          {
+            "node": "Procesar y estandarizar las rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tienda 3 Trigger": {
+      "main": [
+        [
+          {
+            "node": "Procesar y estandarizar las rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crear resumen semanal": {
+      "main": [
+        [
+          {
+            "node": "weekly report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert rows in a table": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2ee44708-fb76-47fe-b923-7b5d61056278",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8b680b64a71a21f69beb9fe6add6a5c83f43b794234298d08275af08c17d6cf1"
+  },
+  "id": "F1NmBwy0Q5XHixzU",
+  "tags": []
+}

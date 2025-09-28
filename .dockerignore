@@ -1,0 +1,6 @@
+# Ignorar todo por defecto
+*
+
+# Excepto lo que sí quiero que Docker use
+!dockerfile
+!prueba_PayJoy.json
