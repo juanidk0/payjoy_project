@@ -1,9 +1,15 @@
+# Usa la imagen oficial de n8n
 FROM n8nio/n8n:latest
 
-WORKDIR /data
+# Copia tu flujo al directorio de n8n
+COPY prueba_PayJoy.json /home/node/.n8n/prueba_PayJoy.json
 
-COPY ./prueba_PayJoy.json /data/prueba_PayJoy.json
-
+# Puerto que expondrá Render
 EXPOSE 5678
 
-CMD ["tini", "--", "n8n", "start"]
+# Variables de entorno no sensibles por defecto
+ENV GENERIC_TIMEZONE=America/Bogota
+ENV N8N_BASIC_AUTH_ACTIVE=true
+
+# Comando por defecto para iniciar n8n
+CMD ["n8n"]

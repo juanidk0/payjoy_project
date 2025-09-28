@@ -1,20 +1,13 @@
-# Ignorar archivos de Python y entornos locales
-*.py
-__pycache__/
-*.pyc
-*.pyo
-.venv/
-env/
-venv/
+FROM n8nio/n8n:latest
 
-# Ignorar git
-.git
-.gitignore
+# Copiar tu flujo
+COPY prueba_PayJoy.json /root/.n8n/prueba_PayJoy.json
 
-# Ignorar archivos innecesarios
-README.md
-requirements.txt
+# Configuración de n8n vía env
+ENV N8N_BASIC_AUTH_ACTIVE=true
+ENV N8N_BASIC_AUTH_USER=<usuario>
+ENV N8N_BASIC_AUTH_PASSWORD=<password>
 
-# Mantener Dockerfile y flujo JSON
-!Dockerfile
-!prueba_PayJoy.json
+EXPOSE 5678
+
+CMD ["n8n", "start"]
