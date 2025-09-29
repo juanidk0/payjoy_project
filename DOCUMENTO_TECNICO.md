@@ -2,7 +2,7 @@
 
 **Versión:** 1.0  
 **Fecha:** Septiembre 2025  
-**Autor:** Equipo de Desarrollo PayJoy  
+**Autor:** JUAN JOSE ROJAS BONILLA 
 
 ---
 
@@ -688,4 +688,4 @@ El sistema está bien posicionado para soportar el crecimiento de PayJoy y evolu
 
 **Documento generado:** Septiembre 2025  
 **Próxima revisión:** Diciembre 2025  
-**Contacto técnico:** equipo-desarrollo@payjoy.com
+**Contacto técnico:** juanjoserojasbonilla9@gmail.com
