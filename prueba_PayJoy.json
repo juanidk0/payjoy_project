@@ -47,336 +47,6 @@
     },
     {
       "parameters": {
-        "operation": "append",
-        "documentId": {
-          "__rl": true,
-          "value": "1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw",
-          "mode": "list",
-          "cachedResultName": "Consolidado",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": "gid=0",
-          "mode": "list",
-          "cachedResultName": "Sheet1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit#gid=0"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "submission_id": "={{ $json.submission_id }}",
-            "respondent_id": "={{ $json.respondent_id }}",
-            "submitted_at": "={{ $json.submitted_at }}",
-            "tienda": "={{ $json.tienda }}",
-            "experiencia": "={{ $json.experiencia }}",
-            "comentario": "={{ $json.comentario }}",
-            "sugerencias": "={{ $json.sugerencias }}",
-            "contacto": "={{ $json.contacto }}",
-            "comentario_completo": "={{ $json.comentario_completo }}",
-            "motivo_principal": "={{ $json.motivo_principal }}",
-            "numero_telefono": "={{ $json.numero_telefono }}"
-          },
-          "matchingColumns": [],
-          "schema": [
-            {
-              "id": "submission_id",
-              "displayName": "submission_id",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "respondent_id",
-              "displayName": "respondent_id",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "submitted_at",
-              "displayName": "submitted_at",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "tienda",
-              "displayName": "tienda",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "experiencia",
-              "displayName": "experiencia",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "comentario",
-              "displayName": "comentario",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "sugerencias",
-              "displayName": "sugerencias",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "contacto",
-              "displayName": "contacto",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "comentario_completo",
-              "displayName": "comentario_completo",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "motivo_principal",
-              "displayName": "motivo_principal",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "numero_telefono",
-              "displayName": "numero_telefono",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7,
-      "position": [
-        448,
-        0
-      ],
-      "id": "512b650f-a536-4d4a-84c7-bce02c075aae",
-      "name": "Append row in sheet",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "hoDhdjb0i1iVBrKf",
-          "name": "Google Sheets account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "operation": "append",
-        "documentId": {
-          "__rl": true,
-          "value": "1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw",
-          "mode": "list",
-          "cachedResultName": "Consolidado",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 575866540,
-          "mode": "list",
-          "cachedResultName": "Dataset",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit#gid=575866540"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "sentimiento": "={{ $json.message.content.sentimiento }}",
-            "tienda": "={{ $json.message.content.tienda }}",
-            "comentario_original": "={{ $json.message.content.comentario_original }}",
-            "experiencia": "={{ $json.message.content.experiencia }}",
-            "menciona_staff": "={{ $json.message.content.menciona_staff }}",
-            "sugerencias": "={{ $json.message.content.sugerencias }}",
-            "contacto": "={{ $json.message.content.contacto }}",
-            "fecha": "={{ $json.message.content.fecha }}",
-            "categoria principal": "={{ $json.message.content.categoria_1 }}",
-            "categoria 2": "={{ $json.message.content.categoria_2 }}",
-            "categoria 3": "={{ $json.message.content.categoria_3 }}"
-          },
-          "matchingColumns": [],
-          "schema": [
-            {
-              "id": "tienda",
-              "displayName": "tienda",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "comentario_original",
-              "displayName": "comentario_original",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "experiencia",
-              "displayName": "experiencia",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "sentimiento",
-              "displayName": "sentimiento",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "categoria principal",
-              "displayName": "categoria principal",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "categoria 2",
-              "displayName": "categoria 2",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "categoria 3",
-              "displayName": "categoria 3",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "menciona_staff",
-              "displayName": "menciona_staff",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "sugerencias",
-              "displayName": "sugerencias",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "contacto",
-              "displayName": "contacto",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "fecha",
-              "displayName": "fecha",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7,
-      "position": [
-        768,
-        16
-      ],
-      "id": "87cf0477-b7ce-443d-9bf4-de2fac69cdc2",
-      "name": "Append row in sheet1",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "hoDhdjb0i1iVBrKf",
-          "name": "Google Sheets account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "conditions": {
           "options": {
             "caseSensitive": true,
@@ -914,6 +584,336 @@
           "name": "Postgres account"
         }
       }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw",
+          "mode": "list",
+          "cachedResultName": "Consolidado",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "submission_id": "={{ $json.submission_id }}",
+            "respondent_id": "={{ $json.respondent_id }}",
+            "submitted_at": "={{ $json.submitted_at }}",
+            "tienda": "={{ $json.tienda }}",
+            "experiencia": "={{ $json.experiencia }}",
+            "comentario": "={{ $json.comentario }}",
+            "sugerencias": "={{ $json.sugerencias }}",
+            "contacto": "={{ $json.contacto }}",
+            "comentario_completo": "={{ $json.comentario_completo }}",
+            "motivo_principal": "={{ $json.motivo_principal }}",
+            "numero_telefono": "={{ $json.numero_telefono }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "submission_id",
+              "displayName": "submission_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "respondent_id",
+              "displayName": "respondent_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "submitted_at",
+              "displayName": "submitted_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tienda",
+              "displayName": "tienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "experiencia",
+              "displayName": "experiencia",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "comentario",
+              "displayName": "comentario",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "sugerencias",
+              "displayName": "sugerencias",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "contacto",
+              "displayName": "contacto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "comentario_completo",
+              "displayName": "comentario_completo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "motivo_principal",
+              "displayName": "motivo_principal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "numero_telefono",
+              "displayName": "numero_telefono",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        448,
+        0
+      ],
+      "id": "512b650f-a536-4d4a-84c7-bce02c075aae",
+      "name": "Consolidado RAWDATA",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "hoDhdjb0i1iVBrKf",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw",
+          "mode": "list",
+          "cachedResultName": "Consolidado",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 575866540,
+          "mode": "list",
+          "cachedResultName": "Dataset",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw/edit#gid=575866540"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "sentimiento": "={{ $json.message.content.sentimiento }}",
+            "tienda": "={{ $json.message.content.tienda }}",
+            "comentario_original": "={{ $json.message.content.comentario_original }}",
+            "experiencia": "={{ $json.message.content.experiencia }}",
+            "menciona_staff": "={{ $json.message.content.menciona_staff }}",
+            "sugerencias": "={{ $json.message.content.sugerencias }}",
+            "contacto": "={{ $json.message.content.contacto }}",
+            "fecha": "={{ $json.message.content.fecha }}",
+            "categoria principal": "={{ $json.message.content.categoria_1 }}",
+            "categoria 2": "={{ $json.message.content.categoria_2 }}",
+            "categoria 3": "={{ $json.message.content.categoria_3 }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "tienda",
+              "displayName": "tienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "comentario_original",
+              "displayName": "comentario_original",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "experiencia",
+              "displayName": "experiencia",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "sentimiento",
+              "displayName": "sentimiento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "categoria principal",
+              "displayName": "categoria principal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "categoria 2",
+              "displayName": "categoria 2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "categoria 3",
+              "displayName": "categoria 3",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "menciona_staff",
+              "displayName": "menciona_staff",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "sugerencias",
+              "displayName": "sugerencias",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "contacto",
+              "displayName": "contacto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        768,
+        16
+      ],
+      "id": "87cf0477-b7ce-443d-9bf4-de2fac69cdc2",
+      "name": "Consolidado Procesado",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "hoDhdjb0i1iVBrKf",
+          "name": "Google Sheets account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -923,22 +923,6 @@
         [
           {
             "node": "Procesar y estandarizar las rows",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Append row in sheet": {
-      "main": [
-        []
-      ]
-    },
-    "Append row in sheet1": {
-      "main": [
-        [
-          {
-            "node": "If",
             "type": "main",
             "index": 0
           }
@@ -982,7 +966,7 @@
       "main": [
         [
           {
-            "node": "Append row in sheet1",
+            "node": "Consolidado Procesado",
             "type": "main",
             "index": 0
           },
@@ -1003,7 +987,7 @@
             "index": 0
           },
           {
-            "node": "Append row in sheet",
+            "node": "Consolidado RAWDATA",
             "type": "main",
             "index": 0
           }
@@ -1058,13 +1042,29 @@
       "main": [
         []
       ]
+    },
+    "Consolidado RAWDATA": {
+      "main": [
+        []
+      ]
+    },
+    "Consolidado Procesado": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "2ee44708-fb76-47fe-b923-7b5d61056278",
+  "versionId": "f354f238-a5c8-4539-b513-62c716b6a985",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8b680b64a71a21f69beb9fe6add6a5c83f43b794234298d08275af08c17d6cf1"
