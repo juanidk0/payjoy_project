@@ -1,15 +1,17 @@
-# Dashboard de Encuestas
+# Dashboard de Análisis de Reviews - PayJoy
 
-Este proyecto expone un tablero interactivo construido con [Streamlit](https://streamlit.io/) para analizar los resultados de encuestas guardadas en una base de datos PostgreSQL. El código principal vive en `dashboard_demo.py` y se conecta a la tabla `reviews` para generar visualizaciones en tiempo real.
+Dashboard interactivo construido con [Streamlit](https://streamlit.io/) para analizar reviews y feedback de clientes de PayJoy. El sistema se conecta a una base de datos PostgreSQL para visualizar métricas, tendencias y gestionar casos pendientes en tiempo real.
 
-## Tabla `reviews`
+## 🗃️ Estructura de Datos
 
-El tablero espera que la consulta `SELECT * FROM reviews` devuelva las columnas siguientes:
+### Tabla `reviews` (PostgreSQL)
+
+El dashboard se conecta a una base de datos PostgreSQL y lee de la tabla `reviews` que contiene las siguientes columnas:
 
 | Columna              | Tipo sugerido       | Descripción                                                                 |
 |----------------------|---------------------|------------------------------------------------------------------------------|
 | `id`                 | `INTEGER`           | Identificador único de la review.                                           |
-| `tienda`             | `INTEGER`           | Id numérico de la tienda (se mapea a Norte/Sur/Centro).                     |
+| `tienda`             | `INTEGER`           | Id numérico de la tienda (1=Norte, 2=Sur, 3=Centro).                       |
 | `comentario_original`| `TEXT`              | Comentario textual que dejó la persona encuestada.                          |
 | `experiencia`        | `INTEGER` (1 a 5)   | Calificación numérica de la experiencia.                                    |
 | `sentimiento`        | `TEXT`              | Sentimiento detectado (`Positivo`, `Negativo`, etc.).                       |
@@ -22,14 +24,15 @@ El tablero espera que la consulta `SELECT * FROM reviews` devuelva las columnas 
 | `fecha`              | `TIMESTAMP`         | Fecha y hora en la que se registró la review.                               |
 | `resuelto`           | `BOOLEAN`           | Estado de seguimiento del caso.                                             |
 
-## Flujo general del tablero
+## 📊 Funcionalidades del Dashboard
 
-1. **Carga de datos**
-   - Se crea un motor SQLAlchemy con las credenciales definidas en el archivo.
-   - Se lee la tabla `reviews` completa y se convierte la columna `fecha` a tipo datetime.
-   - Se mapean los valores numéricos de `tienda` a nombres legibles.
+### 1. **Conexión y carga de datos**
+   - Conexión segura a PostgreSQL usando credenciales en `st.secrets`
+   - Lectura completa de la tabla `reviews` con SQLAlchemy
+   - Mapeo automático de IDs de tienda a nombres legibles (1=Norte, 2=Sur, 3=Centro)
+   - Conversión automática de la columna `fecha` a tipo datetime
 
-2. **Barra lateral de filtros**
+### 2. **Panel de filtros interactivos**
    - Zona/Tienda (multiselección).
    - Sentimiento (multiselección).
   - Rango de calificación usando un `slider` (1 a 5).
@@ -37,9 +40,9 @@ El tablero espera que la consulta `SELECT * FROM reviews` devuelva las columnas 
   - Estado (`Todos`, `Pendientes`, `Resueltos`).
   - Indicador `menciona_staff` (`Todos`, `Sí`, `No`).
 
-   Los filtros se aplican de forma combinada para construir `df_filtrado`.
+   Los filtros se aplican de forma combinada para construir el dataset filtrado.
 
-3. **Secciones principales**
+### 3. **Visualizaciones y análisis**
 
    - **Vista general**: muestra el NPS estimado, satisfacción promedio y total de reviews.
    - **Tendencia de satisfacción**: línea temporal con el promedio de `experiencia` por fecha.
@@ -55,9 +58,16 @@ El tablero espera que la consulta `SELECT * FROM reviews` devuelva las columnas 
      3. Muestra un error si la operación falla.
    - **Exportar datos**: botón para descargar el DataFrame filtrado en formato Excel.
 
-## Ejecución
+## 🚀 Configuración y Ejecución
 
-1. Crea y activa un entorno virtual (opcional pero recomendado):
+### Prerrequisitos
+- Python 3.8+
+- Base de datos PostgreSQL con tabla `reviews`
+- Credenciales de base de datos configuradas
+
+### Instalación
+
+1. Crea y activa un entorno virtual (recomendado):
 
 ```powershell
 python -m venv .venv
@@ -70,7 +80,16 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-3. Ejecuta el tablero:
+3. Configura las credenciales de base de datos en `.streamlit/secrets.toml`:
+
+```toml
+DB_USER = "tu_usuario"
+DB_PASS = "tu_contraseña"
+DB_HOST = "tu_host"
+DB_PORT = "5432"
+```
+
+4. Ejecuta el dashboard:
 
 ```powershell
 streamlit run dashboard_demo.py
@@ -78,16 +97,29 @@ streamlit run dashboard_demo.py
 
 El servidor quedará disponible en <http://localhost:8501> (o el puerto que indique Streamlit).
 
-## Personalización
+## ⚙️ Configuración Avanzada
 
-- **Credenciales**: se recomienda mover los valores `DB_USER`, `DB_PASS`, etc. a variables de entorno para evitar exponerlos en el código.
-- **Mapeo de tiendas**: ajusta el diccionario `tienda_map` según las tiendas reales.
-- **Columnas adicionales**: si la tabla incorpora más variables, puedes agregarlas a los filtros o visualizaciones siguiendo la misma estructura.
-- **Temas destacados**: el helper `obtener_top_categorias` recibe una lista de columnas y puede modificarse para incluir nuevas jerarquías o cambiar el `top_n`.
-- **Autorefresh**: el tablero usa `streamlit-autorefresh` para recargarse automáticamente cada 60&nbsp;segundos. Ajusta el intervalo modificando `REFRESH_INTERVAL_SECONDS` en `dashboard_demo.py`. Si no deseas este comportamiento, puedes desinstalar la librería o comentar el bloque que llama a `st_autorefresh`.
+### Variables de configuración:
+- **`REFRESH_INTERVAL_SECONDS`**: Intervalo de auto-refresh en segundos (default: 60)
+- **`tienda_map`**: Mapeo de IDs numéricos a nombres de tiendas
+- **Credenciales**: Almacenadas de forma segura en `st.secrets`
 
-## Próximos pasos sugeridos
+### Personalización:
+- **Mapeo de tiendas**: Modifica el diccionario `tienda_map` en el código para ajustar nombres
+- **Filtros adicionales**: Agrega nuevos filtros siguiendo la estructura existente
+- **Visualizaciones**: Personaliza gráficos usando Altair y Matplotlib
+- **Autorefresh**: Ajusta o deshabilita modificando `REFRESH_INTERVAL_SECONDS`
 
-- Añadir autenticación o control de acceso si el tablero se expone públicamente.
-- Programar actualizaciones automáticas (por ejemplo via `st.cache_data` o cron jobs) si las encuestas se insertan en tiempo real.
-- Incluir métricas adicionales como duración promedio de respuesta, tiempo de resolución o análisis de sentimiento más granular.
+### Funciones principales:
+- **`obtener_top_categorias()`**: Extrae las categorías más mencionadas por sentimiento
+- **Conexión DB**: Manejo seguro de conexiones PostgreSQL con SQLAlchemy
+- **Filtrado dinámico**: Sistema de filtros que se aplican en tiempo real
+
+## 🔧 Características técnicas
+
+- **Framework**: Streamlit para interfaz web
+- **Base de datos**: PostgreSQL con SQLAlchemy ORM
+- **Visualizaciones**: Altair (gráficos interactivos) y Matplotlib (nubes de palabras)
+- **Auto-refresh**: Actualización automática cada 60 segundos (opcional)
+- **Export**: Descarga de datos filtrados en formato Excel
+- **Responsivo**: Layout adaptativo para diferentes tamaños de pantalla
