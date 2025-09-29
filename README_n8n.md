@@ -19,7 +19,7 @@ Este proyecto implementa un sistema automatizado de procesamiento de feedback de
    - Ejecuta cada minuto para capturar respuestas en tiempo real
 
 2. **Schedule Trigger**
-   - Ejecuta semanalmente (domingo 6:00 AM) para generar reportes
+   - Ejecuta semanalmente (lunes 6:00 AM) para generar reportes
 
 ### Procesamiento de datos:
 
@@ -95,31 +95,6 @@ Enviar reporte semanal por email
 - **PostgreSQL**: Base de datos para almacenamiento
 - **SMTP**: Para envío de emails
 
-### 2. Google Sheets configuradas:
-- **Tienda 1**: `1V2gMFrDUd-IMClhiGsDJ4o_TpkxbBZVhS56MwaDfKIA`
-- **Tienda 2**: [ID de la segunda tienda]
-- **Tienda 3**: `1oMS9SNHYEXrWMpQyuOA3mpp4R5Eeo_lvyo-A4rwKe9c`
-- **Consolidado**: `1APJ-P2fTWftvyTukIPS9voBJbwWFbp9spoBlBi6Y0Iw`
-
-### 3. Base de datos PostgreSQL:
-```sql
--- Crear tabla de reviews
-CREATE TABLE reviews (
-    id SERIAL PRIMARY KEY,
-    tienda INT,
-    comentario_original TEXT,
-    experiencia INT,
-    sentimiento TEXT,
-    categoria_principal TEXT,
-    categoria_2 TEXT,
-    categoria_3 TEXT,
-    menciona_staff BOOLEAN,
-    sugerencias TEXT,
-    contacto TEXT,
-    fecha TIMESTAMP,
-    resuelto BOOLEAN DEFAULT FALSE
-);
-```
 
 ## 📧 Sistema de notificaciones
 
